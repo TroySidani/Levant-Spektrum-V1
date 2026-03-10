@@ -998,15 +998,15 @@
         }
 
         footer::before {
-            content: "لِيفانت";
+            content: "لِيفانت سبكتروم";
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-family: var(--font-heading);
-            font-size: 20rem;
+            font-size: clamp(5rem, 15vw, 14rem);
             color: var(--primary-gold);
-            opacity: 0.015;
+            opacity: 0.04;
             pointer-events: none;
             white-space: nowrap;
         }
@@ -1254,6 +1254,20 @@
         .reveal-delay-3 { transition-delay: 0.3s; }
         .reveal-delay-4 { transition-delay: 0.4s; }
         .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* ═══════════════════════════════════════════
+           ARABIC WATERMARKS
+        ═══════════════════════════════════════════ */
+        .arabic-watermark {
+            position: absolute;
+            font-family: var(--font-heading);
+            color: var(--primary-gold);
+            opacity: 0.045;
+            pointer-events: none;
+            line-height: 1;
+            z-index: 0;
+            user-select: none;
+        }
 
         /* ═══════════════════════════════════════════
            HAMBURGER MENU
@@ -1516,6 +1530,10 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <!-- Arabic: "Welcome to our table" -->
+        <span class="arabic-watermark" style="font-size:clamp(6rem,18vw,14rem);bottom:5%;left:-2%;transform:rotate(-8deg);opacity:0.035;">أهلاً وسهلاً</span>
+        <!-- Arabic: "Bon appetit" -->
+        <span class="arabic-watermark" style="font-size:clamp(4rem,12vw,10rem);top:10%;right:-1%;transform:rotate(6deg);opacity:0.03;">صحتين</span>
         <div class="hero-content">
             <span class="hero-arabic reveal">لِيفانت سبكتروم</span>
             <h1 class="reveal shimmer-text">LEVANT<span>Spektrum</span></h1>
@@ -1536,6 +1554,10 @@
 
     <!-- Our Story Section -->
     <section id="story" class="about">
+        <!-- Arabic: "Food is love" -->
+        <span class="arabic-watermark" style="font-size:clamp(5rem,14vw,12rem);bottom:0%;right:2%;transform:rotate(5deg);opacity:0.04;">الطعام محبة</span>
+        <!-- Arabic: "The Levant" -->
+        <span class="arabic-watermark" style="font-size:clamp(3rem,8vw,7rem);top:5%;left:3%;transform:rotate(-4deg);opacity:0.04;">بلاد الشام</span>
         <div class="about-grid">
             <div class="about-image reveal-left">
                 <div class="about-image-placeholder">
@@ -1571,6 +1593,10 @@
 
     <!-- Menu Section -->
     <section id="menu" class="menu">
+        <!-- Arabic: "Eat and enjoy" -->
+        <span class="arabic-watermark" style="font-size:clamp(5rem,15vw,13rem);top:3%;right:-1%;transform:rotate(8deg);opacity:0.04;">كل وتمتع</span>
+        <!-- Arabic: "Our dishes" -->
+        <span class="arabic-watermark" style="font-size:clamp(3rem,9vw,8rem);bottom:5%;left:1%;transform:rotate(-6deg);opacity:0.04;">أطباقنا</span>
         <div class="section-header reveal">
             <span class="label-gold">The Menu</span>
             <h2 class="shimmer-text">A Journey of Flavors</h2>
@@ -1608,6 +1634,10 @@
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
+        <!-- Arabic: "Beautiful moments" -->
+        <span class="arabic-watermark" style="font-size:clamp(4rem,12vw,10rem);top:2%;left:0%;transform:rotate(-5deg);opacity:0.04;">لحظات جميلة</span>
+        <!-- Arabic: "Our story" -->
+        <span class="arabic-watermark" style="font-size:clamp(3rem,8vw,7rem);bottom:3%;right:2%;transform:rotate(7deg);opacity:0.04;">قصتنا</span>
         <div class="section-header reveal">
             <span class="label-gold">Gallery</span>
             <h2 class="shimmer-text">Captured Moments</h2>
@@ -1652,6 +1682,10 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials">
+        <!-- Arabic: "Our guests" -->
+        <span class="arabic-watermark" style="font-size:clamp(5rem,14vw,12rem);top:2%;right:-1%;transform:rotate(6deg);opacity:0.04;">ضيوفنا الكرام</span>
+        <!-- Arabic: "From the heart" -->
+        <span class="arabic-watermark" style="font-size:clamp(3rem,9vw,8rem);bottom:3%;left:0%;transform:rotate(-7deg);opacity:0.04;">من القلب</span>
         <div class="section-header reveal">
             <span class="label-gold">What Our Guests Say</span>
             <h2 class="shimmer-text">Stories from the Table</h2>
@@ -1717,6 +1751,10 @@
 
     <!-- Reservations Section -->
     <section id="reserve" class="reservations">
+        <!-- Arabic: "Reserve your place" -->
+        <span class="arabic-watermark" style="font-size:clamp(4rem,12vw,10rem);top:3%;left:-1%;transform:rotate(-5deg);opacity:0.04;">احجز مكانك</span>
+        <!-- Arabic: "We welcome you" -->
+        <span class="arabic-watermark" style="font-size:clamp(3rem,8vw,7rem);bottom:4%;right:1%;transform:rotate(6deg);opacity:0.04;">نرحب بكم</span>
         <div class="section-header reveal">
             <span class="label-gold">Reservations</span>
             <h2 class="shimmer-text">Reserve Your Table</h2>
@@ -1774,6 +1812,8 @@
 
     <!-- Visit Us Section -->
     <section class="contact">
+        <!-- Arabic: "Visit us" -->
+        <span class="arabic-watermark" style="font-size:clamp(4rem,11vw,9rem);top:5%;right:2%;transform:rotate(5deg);opacity:0.04;">زورونا</span>
         <div class="contact-grid">
             <div class="map-placeholder reveal">
                 <iframe
